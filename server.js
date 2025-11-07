@@ -58,6 +58,7 @@ app.post("/api/login", async (req, res) => {
 });
 
 // Szerver indítása
-app.listen(3000, () => {
-  console.log("✅ Szerver fut a 3000-es porton");
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`✅ Szerver fut a ${PORT}-as porton`);
 });
